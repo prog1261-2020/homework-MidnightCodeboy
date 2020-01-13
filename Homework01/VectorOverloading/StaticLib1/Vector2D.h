@@ -10,6 +10,12 @@ public:
 
 	bool operator==(const Vector2D& rhs) const;
 	bool operator!=(const Vector2D& rhs) const;
+
+	bool operator<(const Vector2D& rhs) const;
+	bool operator>(const Vector2D& rhs) const;
+	bool operator<=(const Vector2D& rhs) const;
+	bool operator>=(const Vector2D& rhs) const;
+
 	std::string toString() const;
 
 private:

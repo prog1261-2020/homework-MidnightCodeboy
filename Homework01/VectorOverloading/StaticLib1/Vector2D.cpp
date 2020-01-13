@@ -42,3 +42,19 @@ bool Vector2D::operator==(const Vector2D& rhs) const {
 bool Vector2D::operator!=(const Vector2D& rhs) const {
 	return !((*this) == rhs);
 }
+
+bool Vector2D::operator<(const Vector2D& rhs) const {
+    return length() < rhs.length();
+}
+
+bool Vector2D::operator>(const Vector2D& rhs) const {
+    return !((*this) == rhs || (*this) < rhs);
+}
+
+bool Vector2D::operator<=(const Vector2D& rhs) const {
+    return !((*this) > rhs);
+}
+
+bool Vector2D::operator>=(const Vector2D& rhs) const {
+    return !((*this) < rhs);
+}
